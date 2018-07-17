@@ -37,4 +37,12 @@ function mapStateToProps(state) {
     }
 }
 
+// function mapStateToProps(state) {
+//         const {products, loading} = state;
+//     return {
+//         products,
+//         loading
+//     };
+// }
+
 export default connect(mapStateToProps, {addToShoppingCart, getAllProducts})(StoreFront);
