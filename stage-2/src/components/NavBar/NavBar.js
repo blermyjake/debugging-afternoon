@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import Logo from '../../images/dev-mountain-logo.png'
+import {Link, HashRouter} from 'react-router-dom';
 
 class NavBar extends Component {
 
     render() {
         return (
+            <HashRouter>
             <div>
                 <div className="navbar-container">
                     <div className="logo-container">
@@ -22,6 +24,7 @@ class NavBar extends Component {
                 </div>
                 <hr />
             </div>
+            </HashRouter>
         )
     }
 }
