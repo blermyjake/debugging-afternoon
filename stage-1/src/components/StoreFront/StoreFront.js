@@ -23,8 +23,6 @@ class StoreFront extends Component {
     }
 
     render() {
-        
-        
         let productDisplay = this.state.products.map((element, index) => {
             return (
                 <div className="product-container" key={index}>
