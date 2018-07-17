@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './StoreFront.css';
+// import ShoppingCart from '../ShoppingCart/ShoppingCart'
 
 class StoreFront extends Component {
     constructor() {
@@ -14,13 +15,16 @@ class StoreFront extends Component {
     componentDidMount() {
         axios.get("https://practiceapi.devmountain.com/products/")
             .then((response) => {
+                // console.log(response.data)
                 this.setState({
-                    products: response
+                    products: response.data
                 })
             })
     }
 
     render() {
+        
+        
         let productDisplay = this.state.products.map((element, index) => {
             return (
                 <div className="product-container" key={index}>
